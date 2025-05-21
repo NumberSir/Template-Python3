@@ -1,21 +1,72 @@
 [project]
 name = "template-python3"
-version = "0.1.0"
+dynamic = [ "version", "readme", "classifiers", "dependencies" ]
 description = "Template repo for personal Python3 projects."
 authors = [
     {name = "Number_Sir", email = "number_sir@126.com"}
 ]
-license = "LICENSE"
-readme = "README.md"
-requires-python = ">=3.10,<4.0"
-dependencies = [
-    "python-dotenv (>=1.1.0,<2.0.0)",
-    "pydantic (>=2.11.4,<3.0.0)",
-    "pydantic-settings (>=2.9.1,<3.0.0)",
-    "loguru (>=0.7.3,<0.8.0)",
-    "pytest (>=8.3.5,<9.0.0)",
-    "windows-toasts (>=1.3.1,<2.0.0)"
+maintainers = [
+    { name = "Number_Sir", email = "number_sir@126.com" }
 ]
+license = { text = "MIT" }
+requires-python = ">=3.10,<4.0"
+keywords = [ "template", "tools" ]
+
+
+[project.urls]
+homepage = "https://shiruku.miku.chat/"
+repository = "https://github.com/NumberSir/Template-Python3"
+documentation = "https://github.com/NumberSir/Template-Python3/README.md"
+issues = "https://github.com/NumberSir/Template-Python3/issues"
+
+
+[project.scripts]
+[project.gui-scripts]
+[project.entry-points]
+
+
+[tool.poetry]
+package-mode = false
+version = "0.1.0"
+readme = [ "README.md" ]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Database",
+    "Topic :: Internet"
+]
+packages = []
+exclude = ["data", "resource", ".env", ".venv", ".idea", ".vscode"]
+requires-poetry = ">=2.0"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+pydantic = ">=2.11.4,<3.0.0"
+pydantic-settings = ">=2.9.1,<3.0.0"
+loguru = ">=0.7.3,<0.8.0"
+pytest = ">=8.3.5,<9.0.0"
+windows-toasts = ">=1.3.1,<2.0.0"
+poetry-core = ">=2.0.0"
+sqlalchemy = "^2.0.41"
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+
+
+[[tool.poetry.source]]
+name = "tencent"
+url = "https://mirrors.cloud.tencent.com/pypi/simple/"
+
+
+[[tool.poetry.source]]
+name = "ali"
+url = "https://mirrors.aliyun.com/pypi/simple/"
 
 
 [build-system]
